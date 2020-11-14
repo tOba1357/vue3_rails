@@ -47,7 +47,7 @@ export default defineComponent({
     async createUser() {
       const user = await createUser(this.form)
       this.users.push(user)
-      this.name = ''
+      this.form.name = ''
     }
   },
   async created() {
