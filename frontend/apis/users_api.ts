@@ -5,7 +5,7 @@ function createUserFromResponse(res: any): User {
     return new User(res.id, res.name, res.created_at, res.updated_at)
 }
 
-export const getUsers: () => Promise<any> = async () => {
+export const getUsers: () => Promise<User[]> = async () => {
     const res = await axios.get('/users')
     return res.data.map((res: any) => createUserFromResponse(res))
 }
