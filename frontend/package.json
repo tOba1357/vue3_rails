@@ -6,6 +6,8 @@
     "build": "vite build"
   },
   "dependencies": {
+    "axios": "^0.21.0",
+    "dayjs": "^1.9.6",
     "vue": "^3.0.2"
   },
   "devDependencies": {
