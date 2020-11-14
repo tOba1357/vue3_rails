@@ -1,5 +1,5 @@
-import axios from '/lib/axios'
-import User from '/models/user'
+import axios from "/@/lib/axios"
+import User from "/@/models/user"
 
 function createUserFromResponse(res: any): User {
     return new User(res.id, res.name, res.created_at, res.updated_at)
@@ -11,7 +11,7 @@ export const getUsers: () => Promise<User[]> = async () => {
 }
 
 export interface UserCreateParams {
-    name: String;
+    name: String
 }
 
 export const createUser: (params: UserCreateParams) => Promise<User> = async (params: UserCreateParams) => {

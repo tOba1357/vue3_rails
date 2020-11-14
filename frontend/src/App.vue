@@ -30,9 +30,9 @@
 </template>
 
 <script lang="ts">
-import {createUser, getUsers} from '/apis/users_api'
+import {createUser, getUsers} from '/@/apis/users_api'
 import {defineComponent} from 'vue'
-import User from '/models/user';
+import User from '/@/models/user'
 
 export default defineComponent({
   data() {

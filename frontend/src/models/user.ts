@@ -1,12 +1,10 @@
-import dayjs, {Dayjs} from 'dayjs';
-
+import dayjs, {Dayjs} from 'dayjs'
 
 export default class User {
     id: number
     name: string
     createdAt: Dayjs
     updatedAt: Dayjs
-
 
     constructor(id: number, name: string, createdAt: string, updatedAt: string) {
         this.id = id
