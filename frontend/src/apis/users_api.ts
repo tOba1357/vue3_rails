@@ -15,6 +15,6 @@ export interface UserCreateParams {
 }
 
 export const createUser: (params: UserCreateParams) => Promise<User> = async (params: UserCreateParams) => {
-    const res = await axios.post('/users', params)
+    const res = await axios.post('/users', {user: params})
     return createUserFromResponse(res.data)
 }
