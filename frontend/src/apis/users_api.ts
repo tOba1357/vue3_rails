@@ -1,7 +1,14 @@
 import axios from "/@/lib/axios"
 import User from "/@/models/user"
 
-function createUserFromResponse(res: any): User {
+interface UserResponse {
+    id: number
+    name: string
+    created_at: string,
+    updated_at: string
+}
+
+function createUserFromResponse(res: UserResponse): User {
     return new User(res.id, res.name, res.created_at, res.updated_at)
 }
 
@@ -11,7 +18,7 @@ export const getUsers: () => Promise<User[]> = async () => {
 }
 
 export interface UserCreateParams {
-    name: String
+    name: string
 }
 
 export const createUser: (params: UserCreateParams) => Promise<User> = async (params: UserCreateParams) => {
